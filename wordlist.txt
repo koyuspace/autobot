@@ -10,6 +10,8 @@ Commercial$$$business
 Commercial$$$customer
 Commercial$$$company
 Commercial$$$buy
+Escort Services$$$Escort
+Escort Services$$$escort
 
 # Harrassment
 Harrassment$$$nigger
