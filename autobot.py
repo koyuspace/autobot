@@ -14,9 +14,8 @@ f.close()
 # Parse wordlist
 wordlist = []
 for l in s:
-  if not l.startswith("#"):
-    if not l == "":
-      wordlist.append(l)
+  if not l.startswith("#") or not l == "" or not l == "\n":
+      wordlist.append(l.replace("\n", ""))
 
 # Do the actual work
 for item in wordlist:
