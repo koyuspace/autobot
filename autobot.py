@@ -19,8 +19,8 @@ for l in s:
 
 # Do the actual work
 for item in wordlist:
-  reason = item.split("%%%")[0]
-  word = item.split("%%%")[1]
+  reason = item.split("$$$")[0]
+  word = item.split("$$$")[1]
   result = subprocess.run("cd /tmp && sudo -u postgres -H -- psql -d "+database+" -c \"select id from accounts where domain is null and note ~ '"+word+"'\"", stdout=subprocess.PIPE, shell=True)
   data = result.stdout.decode('utf-8').split("-\n")[1].split("(")[0].replace(" ", "").split("\n")
   temp = []

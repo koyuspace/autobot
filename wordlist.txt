@@ -1,19 +1,19 @@
 # Wordlist for Autobot
-# Format: Reason%%%Regex
+# Format: Reason$$$Regex
 
 # Malware
-Vidar Stealer%%%hello [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+Vidar Stealer$$$hello [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 
 # Commercial/Ad spam
-Commercial%%%CEO
-Commercial%%%trade
-Commercial%%%business
-Commercial%%%customer
-Commercial%%%company
-Commercial%%%buy
+Commercial$$$CEO
+Commercial$$$trade
+Commercial$$$business
+Commercial$$$customer
+Commercial$$$company
+Commercial$$$buy
 
 # Harrassment
-Harrassment%%%nigger
-Harrassment%%%tranny
-Harrassment%%%faggot
-Harrassment%%%retard
+Harrassment$$$nigger
+Harrassment$$$tranny
+Harrassment$$$faggot
+Harrassment$$$retard
