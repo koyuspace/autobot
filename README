@@ -1,0 +1,1 @@
+An auto-report bot for Mastodon. Supply OAuth2 token through TOKEN env (can be obtained at /settings/applications) and run the Python script. Currently scans for Vidar Stealer bots, more patterns to come.
