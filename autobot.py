@@ -5,7 +5,7 @@ database = "koyuspace"
 instance = "koyu.space"
 token = os.getenv("TOKEN")
 
-result = subprocess.run("sudo -u postgres -H -- psql -d "+database+" -c \"select id from accounts where domain is null and note ~ 'hello [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'\"", stdout=subprocess.PIPE, shell=True)
+result = subprocess.run("cd /tmp && sudo -u postgres -H -- psql -d "+database+" -c \"select id from accounts where domain is null and note ~ 'hello [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'\"", stdout=subprocess.PIPE, shell=True)
 data = result.stdout.decode('utf-8').split("-\n")[1].split("(")[0].replace(" ", "").split("\n")
 temp = []
 for entry in data:
