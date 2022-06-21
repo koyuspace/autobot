@@ -1,5 +1,4 @@
 # Wordlist for Autobot
-# Format: Reason$$$Regex
 
 # Malware
 Vidar Stealer$$$hello [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
