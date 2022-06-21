@@ -19,6 +19,19 @@ for l in s:
       if not l == "\n":
         wordlist.append(l.replace("\n", ""))
 
+# Read exceptions
+f = open("exceptions.txt", "r")
+e = f.readlines()
+f.close()
+
+# Parse exceptions
+exceptions = []
+for l in e:
+  if not l.startswith("#"):
+    if not l == "":
+      if not l == "\n":
+        exceptions.append(l.replace("\n", ""))
+
 # Do the actual work
 for item in wordlist:
   reason = item.split("$$$")[0]
@@ -32,4 +45,9 @@ for item in wordlist:
   data = temp
 
   for id in data:
-    os.system("curl -X POST -H \"Authorization: Bearer "+token+"\" https://"+instance+"/api/v1/reports -d \"account_id="+id+"&comment="+reason+" (auto-report)\"")
+    exception = False
+    for ex in exceptions:
+      if ex == id:
+        exception = True
+    if not exception:
+      os.system("curl -X POST -H \"Authorization: Bearer "+token+"\" https://"+instance+"/api/v1/reports -d \"account_id="+id+"&comment="+reason+" (auto-report)\"")
