@@ -14,7 +14,7 @@ f.close()
 # Parse wordlist
 wordlist = []
 for l in s:
-  if not l.startswith("#")
+  if not l.startswith("#"):
     if not l == "":
       wordlist.append(l)
 
