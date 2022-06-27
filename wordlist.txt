@@ -10,6 +10,11 @@ Commercial$$$business
 Commercial$$$customer
 Commercial$$$company
 Commercial$$$buy
+Commercial$$$shop
+Commercial$$$consult
+Commercial$$$Consult
+Commercial$$$order
+Commercial$$$Order
 Escort Services$$$Escort
 Escort Services$$$escort
 
