@@ -32,6 +32,12 @@ for l in e:
       if not l == "\n":
         exceptions.append(l.replace("\n", ""))
 
+# Don't report twice
+f = open("done.txt", "r")
+done = f.readlines()
+f.close()
+f = open("done.txt", "a+")
+
 # Do the actual work
 for item in wordlist:
   reason = item.split("$$$")[0]
@@ -49,5 +55,11 @@ for item in wordlist:
     for ex in exceptions:
       if ex == id:
         exception = True
+    for d in done:
+      if d == id:
+        exception = True
     if not exception:
       os.system("curl -X POST -H \"Authorization: Bearer "+token+"\" https://"+instance+"/api/v1/reports -d \"account_id="+id+"&comment="+reason+" (auto-report)\"")
+      f.write(id+"\n")
+
+f.close()
