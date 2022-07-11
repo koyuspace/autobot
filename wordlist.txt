@@ -15,6 +15,11 @@ Commercial$$$consult
 Commercial$$$Consult
 Commercial$$$order
 Commercial$$$Order
+Cryptocurrency$$$bitcoin
+Cryptocurrency$$$Bitcoin
+Cryptocurrency$$$NFT
+Techbros$$$Tesla
+Techbros$$$Elon Musk
 Escort Services$$$Escort
 Escort Services$$$escort
 
