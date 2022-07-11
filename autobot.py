@@ -33,6 +33,7 @@ for l in e:
         exceptions.append(l.replace("\n", ""))
 
 # Don't report twice
+os.system("touch done.txt")
 f = open("done.txt", "r")
 done = f.readlines()
 f.close()
